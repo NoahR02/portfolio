@@ -5,5 +5,5 @@ module.exports = {
       "/": { page: "/" }
     }
   },
-  assetPrefix: isProd ? "https://github.com/NoahR02/portfolio" : "",
+  assetPrefix: isProd ? "https://noahr02.github.io/portfolio" : "",
 }

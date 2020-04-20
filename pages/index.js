@@ -52,7 +52,7 @@ export default function Home() {
         
         <div className="project">
           
-          <h3 className="projectName"><a href="http://calorietracker.site">YouTube MP3 Downloader</a></h3>
+          <h3 className="projectName"><a>YouTube MP3 Downloader</a></h3>
           
           <div className="projectLinks">
             <a> Private Source Code</a>
