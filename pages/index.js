@@ -16,7 +16,7 @@ export default function Home() {
         <span> | </span>
         <a href="/">Resume</a>
         
-        <p id="portfolioDescription">I’m a programmer with an interest for full stack web development. My passion for programming originated from my desire to create products.</p>
+        <p id="portfolioDescription">I’m a programmer with an interest in full stack web development. My passion for programming originated from my desire to create products.</p>
       </nav>
       
       <section id="projects">
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           
           <p className="projectDescription">
-          A fully fledged calorie tracker that allows you to track your food, weight, and mood. Integrated with the USDA FoodData Central API for the best food results!
+          A fully fledged calorie tracker that allows you to track your food and weight. Integrated with the USDA FoodData Central API for the best food results!
           </p>
           
           <div className="projectTech">
@@ -71,6 +71,26 @@ export default function Home() {
         
         </div>
         
+        <div className="project">
+          
+          <h3 className="projectName"><a href="https://noahreppert.netlify.app/">Portfolio</a></h3>
+          
+          <div className="projectLinks">
+            <a href="https://github.com/NoahR02/portfolio">Github</a>           
+          </div>
+          
+          <p className="projectDescription">
+          A portfolio site(this website!) that is built with Next.js. If I decide to expand this website and add blogs then it'll be very easy with Next.js.
+          </p>
+          
+          <div className="projectTech">
+            <span className="tag">React.js</span>
+            <span className="tag">Next.js</span>
+            <span className="tag">SSR</span>
+          </div>
+        
+        </div>
+        
         
       </section>
       
@@ -79,12 +99,12 @@ export default function Home() {
         
         <div className="hobby">
           <h3 className="hobbyHeading">Drawing</h3>
-          <p className="hobbyDescription">In my free time or whenever I'm feeling creative I like to draw.</p>
+          <p className="hobbyDescription">In my free time I like to draw portraits as it allows me to express my creativity.</p>
         </div>
         
         <div className="hobby">
           <h3 className="hobbyHeading">PC Gaming</h3>
-          <p className="hobbyDescription">When I'm done everything that needs to be done I like to sit down and play some games, mostly FPS games like CSGO, Call of Duty, and more.</p>
+          <p className="hobbyDescription">I like to play games, mostly FPS games like CSGO and Call of Duty.</p>
         </div>
         
       </section>
