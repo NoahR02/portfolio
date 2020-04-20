@@ -131,6 +131,7 @@ export default function Home() {
         #nav a {
          font-size: 1.3em;
          margin-right:0.3em;
+         text-decoration: none;
         }
         
         #nav #portfolioName {
@@ -210,6 +211,13 @@ export default function Home() {
             margin-bottom: 1em;
           }
         }
+        
+        @media screen and (max-width: 450px) {
+          .project .projectTech {
+            width: 90%;
+          }
+        }
+        
       `}</style>
       
     </main>
