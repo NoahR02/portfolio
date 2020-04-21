@@ -14,7 +14,7 @@ export default function Home() {
         <span> | </span>
         <a href="tel:484-636-4771">484-636-4771</a>
         <span> | </span>
-        <a href="/">Resume</a>
+        <a href="/resume.pdf">Resume</a>
         
         <p id="portfolioDescription">I’m a programmer with an interest in full stack web development. My passion for programming originated from my desire to create products.</p>
       </nav>
