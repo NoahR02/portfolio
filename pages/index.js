@@ -8,7 +8,7 @@ export default function Home() {
         <h2 id="portfolioName">Noah Reppert</h2>
         <a href="mailto:noahreppert95@gmail.com">Email</a>
         <span> | </span>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/noah-reppert-8577a51a7/">LinkedIn</a>
         <span> | </span>
         <a href="http://github.com/NoahR02">Github</a>
         <span> | </span>
