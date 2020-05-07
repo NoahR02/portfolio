@@ -59,7 +59,7 @@ export default function Home() {
           </div>
           
           <p className="projectDescription">
-            A mp3 downloader that utilities cheerio.js to web scrape search results directly from YouTube and download any video from the search results in a mp3 format.
+            A mp3 downloader that utilizes cheerio.js to web scrape search results directly from YouTube and download any video from the search results in a mp3 format.
           </p>
           
           <div className="projectTech">
