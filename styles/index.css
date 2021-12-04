@@ -1,0 +1,105 @@
+#portfolioHome {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 5em 0;
+    margin-left:3vw;
+}
+  
+#portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies {
+    width: 35vw;
+    margin-bottom: 1em;
+  }
+  
+  #nav a {
+   font-size: 1.3em;
+   margin-right:0.3em;
+   text-decoration: none;
+  }
+  
+  #nav #portfolioName {
+    font-size:3em;
+    margin-bottom: 0.3em;
+  }
+  
+  #nav #portfolioDescription {
+    font-size:1.5em;
+    opacity: 0.7;
+  }
+  
+  
+  #projects #projectsHeading, #portfolioHome #hobbiesHeading {
+    font-size: 2em;
+  }
+  
+  #projects .project:first-of-type {
+    margin-top: 2em;
+  }
+  
+  #projects .project:last-of-type {
+    margin-bottom: 2em;
+  }
+  
+  #projects .project {
+    margin : 4em 0;
+  }
+  
+  .project .projectDescription {
+    margin: 1.5em 0;
+    color:#282828;
+    width: 70%;
+  }
+  
+  .project .projectName a {
+    font-size:1.2em;
+    font-weight:500;
+    text-decoration: none;
+    color:#1d1d1d;
+  }
+  
+  .project a {
+    text-decoration : none;
+    font-size:1.1em;
+  }
+  
+  .project .projectTech {
+    display: flex;
+    flex-wrap:wrap;
+    width: 80%;
+  }
+  
+  #hobbies .hobby:first-of-type {
+    margin-top:2em;
+  }
+  
+  #hobbies .hobby {
+    margin-top:3em;
+  }
+  span {
+    font-size:1.2em;
+  }
+  .tag {
+    background: #f2f2f2;
+    border-radius: 15px;
+    padding:7px 20px;
+    margin-right:1em;
+    margin-bottom:1em;
+    font-size: 0.8em;
+    width: auto;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies {
+      width: 80vw;
+      margin-bottom: 1em;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .project .projectTech {
+      width: 90%;
+    }
+  }

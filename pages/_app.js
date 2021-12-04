@@ -1,9 +1,9 @@
-import App from "next/app";
 import Head from "next/head";
+import "../styles/index.css";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return(
-    <React.Fragment>
+    <>
       <Head>
           <title>Noah Reppert - Portfolio</title>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -20,8 +20,6 @@ function MyApp({ Component, pageProps }) {
           overflow-x:hidden;
         }   
       * {  box-sizing:border-box; font-family: 'Montserrat', sans-serif !important;} `}</style>
-    </React.Fragment>
+    </>
   );
 }
-
-export default MyApp
