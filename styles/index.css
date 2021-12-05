@@ -9,7 +9,7 @@
     margin-left:3vw;
 }
   
-#portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies {
+#portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies, #portfolioHome #education {
     width: 35vw;
     margin-bottom: 1em;
   }
@@ -31,19 +31,19 @@
   }
   
   
-  #projects #projectsHeading, #portfolioHome #hobbiesHeading {
+  #projects #projectsHeading, #portfolioHome #hobbiesHeading, #education #educationHeading {
     font-size: 2em;
   }
   
-  #projects .project:first-of-type {
+  #projects .project:first-of-type, #education .educationItem:first-of-type {
     margin-top: 2em;
   }
   
-  #projects .project:last-of-type {
+  #projects .project:last-of-type, #education .educationItem:last-of-type {
     margin-bottom: 2em;
   }
   
-  #projects .project {
+  #projects .project, #education .educationItem {
     margin : 4em 0;
   }
   
@@ -53,7 +53,7 @@
     width: 70%;
   }
   
-  .project .projectName a {
+  .project .projectName a, .educationItem .schoolName {
     font-size:1.2em;
     font-weight:500;
     text-decoration: none;
@@ -65,7 +65,7 @@
     font-size:1.1em;
   }
   
-  .project .projectTech {
+  .project .projectTech, .educationItem .schoolInfo {
     display: flex;
     flex-wrap:wrap;
     width: 80%;
@@ -92,14 +92,15 @@
   }
   
   @media screen and (max-width: 1200px) {
-    #portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies {
+    #portfolioHome #nav, #portfolioHome #projects, #portfolioHome #hobbies, #portfolioHome #education {
       width: 80vw;
       margin-bottom: 1em;
     }
   }
   
   @media screen and (max-width: 450px) {
-    .project .projectTech {
+    .project .projectTech, .educationItem .schoolInfo {
       width: 90%;
     }
+
   }

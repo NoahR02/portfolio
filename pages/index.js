@@ -47,6 +47,26 @@ function Project(props) {
         );
 }
 
+function EducationItem(props) {
+
+  return(
+    <div className="educationItem">
+    
+    <h3 className="schoolName"> {props.schoolName} </h3>
+    <div className="schoolInfo">
+      
+      <span className="tag"> {props.monthAndYearFrom} - {props.monthAndYearTo} </span>
+      <span className="tag"> GPA: {props.schoolGpa} </span>
+      <span className="tag"> {props.degreeType} </span>
+      <span className="tag"> {props.schoolLocation} </span>
+      
+    </div>
+
+    </div>
+  );
+
+}
+
 export default function Home() {
   return (
     <main id="portfolioHome">
@@ -66,6 +86,23 @@ export default function Home() {
         <p id="portfolioDescription">I’m a programmer with an interest in full stack web development. My passion for programming originated from my desire to create products.</p>
       </nav>
       
+      <section id="education">
+        
+        <h2 id="educationHeading">Education:</h2>
+
+        <EducationItem
+
+          schoolName = "Montgomery County Community College"
+          monthAndYearFrom = "August 2020"
+          monthAndYearTo = "December 2022"
+          degreeType = "Associates of Science in Computer Science"
+          schoolLocation = "Blue Bell, PA"
+          schoolGpa = {3.2}
+
+         />
+        
+      </section>
+
       <section id="projects">
 
         <h2 id="projectsHeading">Projects:</h2>
