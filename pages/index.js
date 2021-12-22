@@ -33,7 +33,7 @@ function Project(props) {
   return(
     <div className="project">
 
-      <h3 className="projectName"><a href="https://calorietracker.site">{props.projectName}</a></h3>
+      <h3 className="projectName"><a href={props.projectNameLink}>{props.projectName}</a></h3>
 
       <div className="projectLinks"> { projectLinks } </div>
 
@@ -109,6 +109,7 @@ export default function Home() {
       
         <Project 
           projectName = "Calorie Tracker"
+          projectNameLink = "https://github.com/NoahR02/calorie-tracker"
           projectDescription = "A fully fledged calorie tracker that allows you to track your food and weight. Integrated with the USDA FoodData Central API for the best food results!"
           projectLinks = {
             {
@@ -129,6 +130,7 @@ export default function Home() {
 
          <Project 
           projectName = "Game Framework"
+          projectNameLink = "https://github.com/NoahR02/game-framework"
           projectDescription = "A 2D game framework that is capable of basic rendering, physics, and sound."
           projectLinks = {
             {
@@ -149,6 +151,7 @@ export default function Home() {
         <Project 
 
           projectName = "Copy Element Text"
+          projectNameLink = "https://addons.mozilla.org/en-US/firefox/addon/copy-element-text/"
           projectDescription = "Adds a menu to the context menu, which will copy an element’s text content. Useful for copying a link’s text content."
           projectLinks = {
              {
@@ -165,6 +168,7 @@ export default function Home() {
 
         <Project 
           projectName="Portfolio"
+          projectNameLink = "https://github.com/NoahR02/portfolio"
           projectDescription="A portfolio site(this website!) that is built with Next.js. If I decide to expand this website and add blogs then it'll be very easy with Next.js."
           projectLinks={ 
             {
