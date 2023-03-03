@@ -1,21 +1,14 @@
+function ProjectLinkWithLogo(props) {
+  if(!props.logo || !props.link)
+    return null;
+
+  return(
+    <a className="projectLinkWithLogo" href={props.link}> <img src={props.logo}/> </a>
+  );
+}
+
+
 function Project(props) {
-
-  const projectLinksRenderData = () => {
-    let projectLinks = [];
-
-    for(let [key, value] of Object.entries(props.projectLinks)) {
-      projectLinks.push(<a key={key} href={value}> {key} </a>);
-      projectLinks.push(<span key={value}> | </span>);
-    }
-  
-    // Remove the extra |.
-    projectLinks.pop();
-
-    return projectLinks;
-  };
-
-  let projectLinks = projectLinksRenderData();
-
 
   const projectTechRenderData = () => {
   
@@ -33,9 +26,14 @@ function Project(props) {
   return(
     <div className="project">
 
-      <h3 className="projectName"><a href={props.projectNameLink}>{props.projectName}</a></h3>
+      { props.projectImageLink !== undefined && <img className="projectImage" src={props.projectImageLink} /> }
 
-      <div className="projectLinks"> { projectLinks } </div>
+      <h3 className="projectName">
+        <a href={props.projectNameLink}>{props.projectName}</a>
+        { props.githubLink !== undefined && <ProjectLinkWithLogo logo="github-logo.png" link={props.githubLink} /> }
+        { props.firefoxLink !== undefined && <ProjectLinkWithLogo logo="firefox-logo.png" link={props.firefoxLink} /> }
+        { props.figmaLink !== undefined && <ProjectLinkWithLogo logo="figma-logo.webp" link={props.figmaLink} /> }
+      </h3>
 
       <p className="projectDescription">{props.projectDescription}</p>
 
@@ -47,26 +45,6 @@ function Project(props) {
         );
 }
 
-function EducationItem(props) {
-
-  return(
-    <div className="educationItem">
-    
-    <h3 className="schoolName"> {props.schoolName} </h3>
-    <div className="schoolInfo">
-      
-      <span className="tag"> {props.monthAndYearFrom} - {props.monthAndYearTo} </span>
-      <span className="tag"> GPA: {props.schoolGpa} </span>
-      <span className="tag"> {props.degreeType} </span>
-      <span className="tag"> {props.schoolLocation} </span>
-      
-    </div>
-
-    </div>
-  );
-
-}
-
 export default function Home() {
   return (
     <main id="portfolioHome">
@@ -75,7 +53,7 @@ export default function Home() {
         <h2 id="portfolioName">Noah Reppert</h2>
         <a href="mailto:noahreppert95@gmail.com">Email</a>
         <span> | </span>
-        <a href="https://www.linkedin.com/in/noah-reppert-8577a51a7/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/noahreppert/">LinkedIn</a>
         <span> | </span>
         <a href="http://github.com/NoahR02">Github</a>
         <span> | </span>
@@ -85,38 +63,49 @@ export default function Home() {
         
         <p id="portfolioDescription">I’m a programmer with an interest in full stack web development. My passion for programming originated from my desire to create products.</p>
       </nav>
-      
-      <section id="education">
-        
-        <h2 id="educationHeading">Education:</h2>
-
-        <EducationItem
-
-          schoolName = "Montgomery County Community College"
-          monthAndYearFrom = "August 2020"
-          monthAndYearTo = "December 2022"
-          degreeType = "Associates of Science in Computer Science"
-          schoolLocation = "Blue Bell, PA"
-          schoolGpa = {3.2}
-
-         />
-        
-      </section>
 
       <section id="projects">
 
         <h2 id="projectsHeading">Projects:</h2>
       
         <Project 
+          projectImageLink = "https://github.com/NoahR02/odin-ecs/raw/main/repo_images/ecs-readme.svg"
+          projectName = "Odin ECS"
+          projectNameLink = "https://github.com/NoahR02/odin-ecs"
+          projectDescription = "An Entity Component System that can dynamically add functionality to objects in my game. Odin ECS doesn’t rely on bit masks, so I can have an unlimited* amount of component types."
+          githubLink = "https://github.com/NoahR02/odin-ecs"
+          projectTech = {
+            [
+              "Odin",
+              "Entity Component System"
+            ]
+          }
+        />
+
+        <Project 
+          projectImageLink = "island-generator.png"
+          projectName = "Island Generator"
+          projectNameLink = "https://github.com/odin-lang/examples/blob/master/math/noise/draw_texture/noise.odin"
+          projectDescription = "Island generator that uses OpenSimplex Noise and gradient points to generate unique terrain."
+          githubLink = "https://github.com/odin-lang/examples/blob/master/math/noise/draw_texture/noise.odin"
+          projectTech = {
+            [
+              "Odin",
+              "OpenSimplex Noise",
+              "OpenGL",
+              "GLSL",
+              "Git"
+            ]
+          }
+        />
+
+        <Project 
+          projectImageLink = "calorietracker.png"
           projectName = "Calorie Tracker"
           projectNameLink = "https://github.com/NoahR02/calorie-tracker"
           projectDescription = "A fully fledged calorie tracker that allows you to track your food and weight. Integrated with the USDA FoodData Central API for the best food results!"
-          projectLinks = {
-            {
-              "Github" : "https://github.com/NoahR02/calorie-tracker",
-              "Figma Designs": "https://www.figma.com/file/gNLtbyZgynOxFP4hJWGdkx/Calorie-Counter?node-id=0%3A1"
-            }
-          }
+          githubLink = "https://github.com/NoahR02/calorie-tracker"
+          figmaLink = "https://www.figma.com/file/gNLtbyZgynOxFP4hJWGdkx/Calorie-Counter?node-id=0%3A1"
           projectTech = {
             [
               "React.js",
@@ -129,14 +118,11 @@ export default function Home() {
           />
 
          <Project 
+          projectImageLink = "game-framework.png"
           projectName = "Game Framework"
           projectNameLink = "https://github.com/NoahR02/game-framework"
           projectDescription = "A 2D game framework that is capable of basic rendering, physics, and sound."
-          projectLinks = {
-            {
-              "Github" : "https://github.com/NoahR02/game-framework"           
-            }
-          }
+          githubLink = "https://github.com/NoahR02/game-framework"
           projectTech = {
             [
               "C++",
@@ -153,52 +139,14 @@ export default function Home() {
           projectName = "Copy Element Text"
           projectNameLink = "https://addons.mozilla.org/en-US/firefox/addon/copy-element-text/"
           projectDescription = "Adds a menu to the context menu, which will copy an element’s text content. Useful for copying a link’s text content."
-          projectLinks = {
-             {
-              "Github" : "https://github.com/NoahR02/copy-element-text",
-              "Firefox Extension" : "https://addons.mozilla.org/en-US/firefox/addon/copy-element-text/"
-             } 
-          }
+          githubLink = "https://github.com/NoahR02/copy-element-text"
+          firefoxLink = "https://addons.mozilla.org/en-US/firefox/addon/copy-element-text/"
           projectTech = {
             [ "JavaScript" ]
           }
 
         />
-
-
-        <Project 
-          projectName="Portfolio"
-          projectNameLink = "https://github.com/NoahR02/portfolio"
-          projectDescription="A portfolio site(this website!) that is built with Next.js. If I decide to expand this website and add blogs then it'll be very easy with Next.js."
-          projectLinks={ 
-            {
-              "Github" : "https://github.com/NoahR02/portfolio"
-            }
-          }
-          projectTech={
-            [
-              "React.js",
-              "Next.js",
-              "SSR"
-            ]
-          }
-        />
         
-        
-      </section>
-      
-      <section id="hobbies">
-        <h2 id="hobbiesHeading">Hobbies:</h2>
-        
-        <div className="hobby">
-          <h3 className="hobbyHeading">Drawing</h3>
-          <p className="hobbyDescription">In my free time I like to draw portraits as it allows me to express my creativity.</p>
-        </div>
-        
-        <div className="hobby">
-          <h3 className="hobbyHeading">PC Gaming</h3>
-          <p className="hobbyDescription">I like to play games, mostly FPS games like CSGO and Call of Duty.</p>
-        </div>
         
       </section>
       
