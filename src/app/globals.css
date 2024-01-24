@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-h1 {
+    line-height: 1.45;
+}
+
+* {
+    box-sizing: border-box;
+}
