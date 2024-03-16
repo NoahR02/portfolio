@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #fff;
+  --background: #121212;
+}
+
+.copy-to-clipboard-button:hover .tooltip-copy-to-clipboard {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copy-to-clipboard-button .tooltip-copy-to-clipboard {
+  transition: opacity 100ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.copy-to-clipboard-button .tooltip-copy-to-clipboard {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bento-container {
+  box-sizing: border-box;
+  padding: 60px 42px;
+  border: 2px solid #262626;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 500px) {
+  .bento-container {
+    padding: 2rem;
+  }
+}
+
+
+body {
+  color: var(--foreground);
+
+  background: var(--background);
+  background: radial-gradient(circle at top, rgba(84,83,91,1) 1%, rgb(28, 27, 27) 20%);
+  min-height: 100vh;
+}
